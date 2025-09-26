@@ -1,0 +1,71 @@
+/* Fix the welcome heading at the top */
+.fixed-welcome {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+/* Task font-families for categories */
+.task-work {
+  font-family: 'Roboto', Arial, sans-serif !important;
+}
+.task-personal {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+.task-study {
+  font-family: 'Fira Sans', Arial, sans-serif !important;
+}
+.task-upcoming {
+  font-family: 'Quicksand', Arial, sans-serif !important;
+}
+.task-today {
+  font-family: 'Quicksand', Arial, sans-serif !important;
+}
+/* Heading font-families for categories */
+.heading-work {
+  font-family: 'Roboto', Arial, sans-serif !important;
+}
+.heading-personal {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+.heading-study {
+  font-family: 'Fira Sans', Arial, sans-serif !important;
+}
+/* Scrollbar only for main content area */
+.main-content-scroll {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+body {
+  background-color: rgb(253, 243, 243);
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: #080808;
+  color: white;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  color: white;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #495057;
+}
+
+.task-completed {
+  text-decoration: line-through;
+  color: gray;
+}

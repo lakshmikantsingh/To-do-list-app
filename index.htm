@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Google Fonts for categories -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@700&family=Fira+Sans:wght@700&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-md-3 col-lg-2 sidebar">
+      <h4 class="text-center" style="font-size: 50px; font-family: 'Quicksand', sans-serif; color:white;"> To-Do-list</h4>
+  <a href="#" class="active" onclick="setFilter('all')" style="font-size: 20px;"><i class="fa-solid fa-list-check me-2"></i>All Tasks</a>
+  <a href="#" onclick="setFilter('today')"><i class="fa-solid fa-calendar-day me-2"></i>Today</a>
+  <a href="#" onclick="setFilter('upcoming')"><i class="fa-solid fa-calendar-plus me-2"></i>Upcoming</a>
+  <a href="#" onclick="setFilter('completed')"><i class="fa-solid fa-circle-check me-2"></i>Completed</a>
+      <hr>
+      <h6 class="px-2" style="font-size: 24px;">Categories</h6>
+  <a href="#" onclick="setFilter('work')"><i class="fa-solid fa-briefcase me-2"></i>Work</a>
+  <a href="#" onclick="setFilter('personal')"><i class="fa-solid fa-user me-2"></i>Personal</a>
+  <a href="#" onclick="setFilter('study')"><i class="fa-solid fa-book me-2"></i>Study</a>
+    </div>
+
+    <!-- Main Content -->
+  <div class="col-md-9 col-lg-10 p-4 main-content-scroll">
+      <div class="sticky-top-section">
+        <div class="text-center fixed-welcome">
+          <h2 class="mb-4" id="mainHeading" style="font-size: 75px; font-family: 'Quicksand', sans-serif; color: rgba(0, 0, 0, 0.521); animation: fadeIn 3s; text-align: center;">Welcome back! Lakshmikant</h2>
+        
+        <hr>     
+  <!-- Add Task Form -->
+        <form id="taskForm" class="row g-3 mb-4">
+          <div class="col-md-4">
+            <input type="text" id="taskInput" class="form-control" placeholder="Enter task..." required>
+          </div>
+          <div class="col-md-3">
+            <input type="date" id="taskDate" class="form-control" required>
+          </div>
+          <div class="col-md-3">
+            <select id="taskCategory" class="form-select" required>
+              <option value="work">Work</option>
+              <option value="personal">Personal</option>
+              <option value="study">Study</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-outline-success w-100">Commit Task</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Task List -->
+      <ul id="taskList" class="list-group"></ul>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
+
